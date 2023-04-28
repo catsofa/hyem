@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
 
     $('.slick').slick({
 
@@ -53,6 +53,20 @@ $(function(){
         $('nav.side').removeClass('on');
     });
 
+    //nav - click
+    $('.gnb li > a').on('click',function(){
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+    });
+
+    //nav - side - click
+    $('.side li > a').on('click',function(){
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        //setTimeout(function(){
+            $('nav.side').removeClass('on');
+        //},0);
+        
+    });
+
     // main skills progressbar
     if ( $('.progress-group').length ) { 
         var waypoint = new Waypoint({ element: $('.progress-group'),
@@ -64,7 +78,7 @@ $(function(){
     $('footer').before('<div class="footer_height"></div>');
     $('.footer_height').css('height',$('footer').outerHeight());    
 
-    var tfAction = true;
+    //var tfAction = true;
 
     
 
@@ -110,7 +124,7 @@ $(window).on('scroll',function(){
     }
 
     scrollGo($('.move_img'));
-    scrollGo($('.bg_fixed > .animated'));
+    //scrollGo($('.bg_fixed > .animated'));
     animate_bg_init();
 
     //scroll indicator

@@ -20,29 +20,29 @@
     <header>
         
         <nav class="gnb">
-            <h1>Hyem</h1>
-            <ul>
-                <li>HOME</li>
-                <li>COMPANY</li>
-                <li>BUSINESS</li>
-                <li>PRODUCT</li>
-                <li>CUSTOMER</li>
-            </ul>
-            <button class="btn_nav">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="con">
+                <h1>Hyem</h1>
+                <ul>
+                    <li><a href="#main">Main</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#career">Career</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                </ul>
+                <button class="btn_nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
 
         <nav class="side">
             <h1>Logo</h1>
             <ul>
-                <li>HOME</li>
-                <li>COMPANY</li>
-                <li>BUSINESS</li>
-                <li>PRODUCT</li>
-                <li>CUSTOMER</li>
+                <li><a href="#main">Main</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#profile">Profile</a></li>
             </ul>
             <button class="btn_close">
                 <span></span>
@@ -58,8 +58,73 @@
 
     <section>
 
+        <!-- bg_fixed -->
+        <div class="bg_fixed animatedParent animateOnce" id="main">
+            <p class="animated fadeInUpShort go">Web Publisher</p>
+            <h2 class="animated fadeInUpShort go">함께 일하고 싶은 웹퍼블리셔<br />김혜미 포트폴리오</h2>
+        </div>
+        <!-- // bg_fixed -->
+
         <div class="container">
-            <article>
+
+            <!-- progress -->
+            <div id="skill">
+                <div class="col-md-6 col-text">
+                    <h2 lang="en">Satisfaction</h2>
+                    <h3>성공을 추구하지 않습니다. 1%라도 고객들의 만족도를 우선으로 합니다.</h3>
+                    <p>
+                        고객들의 만족도를 통해 증명된 원픽셀 피트니스를 확인해보세요! <br>
+                        건강한 삶을 누리기 위해 모든 직원들이 노력하고 있습니다.
+                    </p>
+                    <!--
+                        ## 프로그레스 바 퍼센트 지정 방법 ##
+                        ㆍ아래 각 <div class="progress-group" data-percentage="숫자"> ... </div> 태그에서 data-percentage 부분에 숫자를 입력하시면 됩니다.
+                        ㆍdata-percentage 속성에는 0 ~ 100 까지의 정수만 입력해 주시고, % 등의 특수문자는 절대 넣지 말아 주세요!
+                    -->
+                    <!-- progress group : s -->
+                    <div class="progress-group" data-percentage="88">
+                        <div class="progress-heading" lang="en">
+                            <span class="title">재방문율</span>
+                            <span class="percent">
+                                <span class="percent-text"></span>
+                            </span>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <!-- progress group : e -->
+                    <!-- progress group : s -->
+                    <div class="progress-group" data-percentage="75">
+                        <div class="progress-heading" lang="en">
+                            <span class="title">감량 목표 성공율</span>
+                            <span class="percent">
+                                <span class="percent-text"></span>
+                            </span>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <!-- progress group : e -->
+                    <!-- progress group : s -->
+                    <div class="progress-group" data-percentage="96">
+                        <div class="progress-heading" lang="en">
+                            <span class="title">고객만족도</span>
+                            <span class="percent">
+                                <span class="percent-text"></span>
+                            </span>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <!-- progress group : e -->
+                </div>
+            </div>
+            <!-- // progress -->
+
+            <article id="career">
                 <!-- 1 -->
                 <div class="item_list">
                     
@@ -141,6 +206,70 @@
                 </div>
                 <!-- // 5 -->
 
+                <!-- 5 -->
+                <div class="item_list">                    
+                    <div class="item_box">
+                        <strong>하나머니 소액펀드</strong>
+                        <div class="txt">
+                            <img src="images/pf_hana_fund.png" alt="하나머니 소액펀드" />
+                        </div>
+                        <ul class="info">
+                            <li>하이브리드앱 구축</li>
+                            <li>2018년 11월 ~ 2019년 3월</li>
+                            <li>#HTML #CSS #J-Query #JavaScript #Chart #XD #PSD</li>
+                        </ul>
+                    </div>                    
+                </div>
+                <!-- // 5 -->
+
+                <!-- 6 -->
+                <div class="item_list">                    
+                    <div class="item_box">
+                        <strong>아이템베이 PC</strong>
+                        <div class="txt">
+                            <img src="images/pf_bay_pc.png" alt="아이템베이 PC" />
+                        </div>
+                        <ul class="info">
+                            <li>운영 / 리뉴얼 구축</li>
+                            <li>2015년 3월 ~ 2018년 8월</li>
+                            <li>#HTML #CSS #J-Query #JavaScript #PSD</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // 6 -->
+
+                <!-- 7 -->
+                <div class="item_list">                    
+                    <div class="item_box">
+                        <strong>아이템베이 MO</strong>
+                        <div class="txt">
+                            <img src="images/pf_bay_mo.png" alt="아이템베이 MO" />
+                        </div>
+                        <ul class="info">
+                            <li>운영 / 리뉴얼 구축 </li>
+                            <li>2015년 3월 ~ 2018년 8월</li>
+                            <li>#HTML #CSS #J-Query #JavaScript #PSD</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // 7 -->
+
+                <!-- 8 -->
+                <div class="item_list">                    
+                    <div class="item_box">
+                        <strong>예스콜닷컴</strong>
+                        <div class="txt">
+                            <img src="images/pf_yescall_PC.png" alt="예스콜닷컴" />
+                        </div>
+                        <ul class="info">
+                            <li>빅데이터 기반 포털 반응형웹 구축</li>
+                            <li>2010년 8월 ~ 2014년 9월</li>
+                            <li>#HTML #CSS #BootStrap #PSD</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // 8 -->
+
             </article>
             
             <!-- move_box 1 -->
@@ -204,69 +333,9 @@
 
         </div>
 
-        <!-- bg_fixed -->
-        <div class="bg_fixed animatedParent animateOnce">
-            <p class="animated fadeInUpShort">Our Healthy Life</p>
-            <h2 class="animated fadeInUpShort">We support our customers' healthy lives.<br />Let's switch to a healthy life with us!</h2>
-        </div>
-        <!-- // bg_fixed -->
+        
 
-        <!-- progres"s -->
-        <div class="container">
-            <div class="col-md-6 col-text">
-                <h2 lang="en">Satisfaction</h2>
-                <h3>성공을 추구하지 않습니다. 1%라도 고객들의 만족도를 우선으로 합니다.</h3>
-                <p>
-                    고객들의 만족도를 통해 증명된 원픽셀 피트니스를 확인해보세요! <br>
-                    건강한 삶을 누리기 위해 모든 직원들이 노력하고 있습니다.
-                </p>
-                <!--
-                    ## 프로그레스 바 퍼센트 지정 방법 ##
-                    ㆍ아래 각 <div class="progress-group" data-percentage="숫자"> ... </div> 태그에서 data-percentage 부분에 숫자를 입력하시면 됩니다.
-                    ㆍdata-percentage 속성에는 0 ~ 100 까지의 정수만 입력해 주시고, % 등의 특수문자는 절대 넣지 말아 주세요!
-                -->
-                <!-- progress group : s -->
-                <div class="progress-group" data-percentage="88">
-                    <div class="progress-heading" lang="en">
-                        <span class="title">재방문율</span>
-                        <span class="percent">
-                            <span class="percent-text"></span>
-                        </span>
-                    </div>
-                    <div class="progress-wrap">
-                        <div class="bar"></div>
-                    </div>
-                </div>
-                <!-- progress group : e -->
-                <!-- progress group : s -->
-                <div class="progress-group" data-percentage="75">
-                    <div class="progress-heading" lang="en">
-                        <span class="title">감량 목표 성공율</span>
-                        <span class="percent">
-                            <span class="percent-text"></span>
-                        </span>
-                    </div>
-                    <div class="progress-wrap">
-                        <div class="bar"></div>
-                    </div>
-                </div>
-                <!-- progress group : e -->
-                <!-- progress group : s -->
-                <div class="progress-group" data-percentage="96">
-                    <div class="progress-heading" lang="en">
-                        <span class="title">고객만족도</span>
-                        <span class="percent">
-                            <span class="percent-text"></span>
-                        </span>
-                    </div>
-                    <div class="progress-wrap">
-                        <div class="bar"></div>
-                    </div>
-                </div>
-                <!-- progress group : e -->
-            </div>
-        </div>
-        <!-- // progress -->
+        
 
         <div style="height:500px;"></div>        
 
