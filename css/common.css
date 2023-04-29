@@ -115,7 +115,7 @@ nav.side ul li {padding:20px 0; border-bottom:1px solid rgba(255,255,255, .2); c
 
 .animated-bg-section {position: relative; padding:50px 0;}
 .animated-bg-section .container {position: relative; z-index: 5}
-.animated-bg-section .caption {text-align: center; padding: 0 15%}
+.animated-bg-section .caption {text-align: center; padding: 0 10%; word-break:keep-all;}
 .animated-bg-section .caption h2 {font-size: 48px; font-weight: 300; color: #fff; margin-bottom: 20px}
 .animated-bg-section .caption p {font-weight: 300; color: #fff; line-height: 1.75; margin-bottom: 35px; opacity: .8}
 .animated-bg-section .animated-bg {position: absolute; top: 0; left: 0; bottom: 0; right: 0; /*background-color: #fa5c5c;*/ background-image:linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); z-index: 1; transform: matrix(.4,0,0,1,0,0)}
@@ -134,16 +134,16 @@ nav.side ul li {padding:20px 0; border-bottom:1px solid rgba(255,255,255, .2); c
 .move_img img:nth-child(2) {transform:translate(50px,-100px);}
 
 /* progress */
-.col-text {margin-top:100px;}
-.col-text .progress-group {margin-top: 30px}
-.col-text .progress-group .progress-heading {position: relative; margin-bottom: 15px; overflow:hidden;}
-.col-text .progress-group .progress-heading span {font-size: 14px; font-weight: 300; color: #999; letter-spacing: 0}
-.col-text .progress-group .progress-heading .percent {position: absolute; top: 0; left: 0; right: 0}
-.col-text .progress-group .progress-heading .percent .percent-text {position: relative; display: inline-block; opacity: 0; transform: translateX(-100%); transition: opacity 1s ease}
-.col-text .progress-group.active .progress-heading .percent .percent-text {opacity: 1}
-.col-text .progress-group .progress-heading .percent .percent-text:after {content: '%'}
-.col-text .progress-group .progress-wrap {position: relative; height: 5px; overflow: hidden}
-.col-text .progress-group .progress-wrap .bar {position: absolute; top: 0; left: 0; bottom: 0; background: linear-gradient(to right, #ffbcfa, #fa5c5c)}
+.progress-box {display:flex; flex-wrap:wrap;}
+.progress-box .progress-group {flex:1 1 50%; margin-top:30px; padding:10px;}
+.progress-box .progress-group .progress-heading {position: relative; margin-bottom: 15px; overflow:hidden;}
+.progress-box .progress-group .progress-heading span {color:#111; letter-spacing: 0}
+.progress-box .progress-group .progress-heading .percent {position: absolute; top: 0; left: 0; right: 0}
+.progress-box .progress-group .progress-heading .percent .percent-text {position: relative; display: inline-block; opacity: 0; transform: translateX(-100%); transition: opacity 1s ease; color:#666; font-size:14px;}
+.progress-box .progress-group.active .progress-heading .percent .percent-text {opacity: 1}
+.progress-box .progress-group .progress-heading .percent .percent-text:after {content: '%'}
+.progress-box .progress-group .progress-wrap {position: relative; height: 5px; overflow: hidden}
+.progress-box .progress-group .progress-wrap .bar {position: absolute; top: 0; left: 0; bottom: 0; background: linear-gradient(to right, #fbc2eb, #a6c1ee)}
 
 /* bg_fixed */
 .bg_fixed {height:100vh; background:url('../images/main_11.jpg') no-repeat center/cover fixed; color:#fff; text-align:center; word-break:keep-all;}
@@ -158,7 +158,7 @@ nav.side ul li {padding:20px 0; border-bottom:1px solid rgba(255,255,255, .2); c
 .ico_skill::after {content:''; position:absolute; right:-8px; top:7px; width:36px; height:4px; background:#000; border-radius:5px; transform:rotate(45deg);}
 .ico_skill span {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%;}
 .skill_list.type2 {margin-top:50px;}
-.skill_list.type2 .ico_skill {max-width:80px; height:50px; font-size:14px;}
+.skill_list.type2 .ico_skill {max-width:80px; height:50px; font-size:14px; border-radius:5px;}
 .skill_list.type2 .ico_skill::before {width:10px; height:10px;}
 .skill_list.type2 .ico_skill::after {width:22px; right:-6px; top:2.5px;}
 
@@ -182,7 +182,7 @@ address {}
     .move_line {animation-duration:40s;}
     .item_list {flex:1 1 50%;}
     .item_box strong {font-size:16px;}
-    h3 {margin:50px auto 30px;}
+    h3 {margin:100px auto 30px;}
 
     /* slick */
     .slick {height:50vh;}
@@ -200,6 +200,10 @@ address {}
     /* bg_fixed */
     .bg_fixed > p {font-size:4vw;}
     .bg_fixed > h2 {font-size:5vw;}
+
+    /* progress */
+    .progress-box {margin-top:30px;}
+    .progress-box .progress-group {flex:1 1 100%; margin-top:0;}
 
 
 }
