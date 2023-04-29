@@ -71,14 +71,24 @@ $(document).ready(function(){
     if ( $('.progress-group').length ) { 
         var waypoint = new Waypoint({ element: $('.progress-group'),
             handler: function(direction) { animate_progress_bar(); }, offset: '100%' }); 
-    } 
-
+    }
 
     //footer
     $('footer').before('<div class="footer_height"></div>');
     $('.footer_height').css('height',$('footer').outerHeight());    
 
     //var tfAction = true;
+
+    $('.skill_list > li').each(function(i){   
+        var $this = $(this);
+        $(window).on('scroll',function(){
+            if( $(window).scrollTop() > $this.offset().top - $(window).outerHeight()*1.3 ){
+                $this.addClass('go');
+            }else{                
+                $this.removeClass('go');
+            }
+        });
+    });
 
     
 
@@ -98,19 +108,12 @@ $(window).on('scroll',function(){
         $('nav.gnb').removeClass('on');
     }
 
-    //ani-box
-    if( $(this).scrollTop() > $('.ani_box').offset().top - $(window).outerHeight() + 200 ){
-        $('.ani_box .bg').addClass('on');
-    }else{
-        $('.ani_box .bg').removeClass('on');
-    }
-
-    //move-img    
+    //scroll-go
     function scrollGo(e){
-        if( $(this).scrollTop() > e.offset().top - $(window).outerHeight() + 200 ){
+        if( $(this).scrollTop() > e.offset().top - $(window).outerHeight()*1.5 ){
             e.addClass('go');
         }else{
-            e .removeClass('go');
+            e.removeClass('go');
         }
     }
 
@@ -123,8 +126,10 @@ $(window).on('scroll',function(){
         }
     }
 
-    scrollGo($('.move_img'));
-    //scrollGo($('.bg_fixed > .animated'));
+    //scrollGo($('.move_img'));
+    //scrollGo($('.skill_list > li'));
+    
+
     animate_bg_init();
 
     //scroll indicator
@@ -174,7 +179,7 @@ function animate_bg_init() {
         if ( $scrollTop >= $areaStart && $scrollTop <= $areaEnd ) {
             var $scale = ($scrollTop - $areaStart) / ($areaEnd - $areaStart);
             $factor = 0.7 + 0.3 * $scale,
-            $factor >= 0.98 ? $factor = 1 : $factor < 0.7 && ($factor = 0.3),
+            $factor >= 0.98 ? $factor = 1 : $factor < 0.4 && ($factor = 0.3),
             $this.css({ transform: 'matrix(' + $factor + ', 0, 0, 1, 0, 0)' });
         } 
     }); 

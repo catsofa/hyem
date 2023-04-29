@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="css/slick.css"/>
 <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 <link rel="stylesheet" type="text/css" href="css/animation.css"/>
-<link rel="stylesheet" type="text/css" href="css/waypoints.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="css/waypoints.css"/> -->
 <link rel="stylesheet" type="text/css" href="css/common.css"/>
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
@@ -30,8 +30,8 @@
                 <ul>
                     <li><a href="#main">Main</a></li>
                     <li><a href="#skill">Skill</a></li>
-                    <li><a href="#career">Career</a></li>
                     <li><a href="#profile">Profile</a></li>
+                    <li><a href="#career">Career</a></li>                    
                 </ul>
                 <button class="btn_nav">
                     <span></span>
@@ -42,12 +42,12 @@
         </nav>
 
         <nav class="side">
-            <h1>Logo</h1>
+            <h1>Hyem</h1>
             <ul>
                 <li><a href="#main">Main</a></li>
                 <li><a href="#skill">Skill</a></li>
-                <li><a href="#career">Career</a></li>
                 <li><a href="#profile">Profile</a></li>
+                <li><a href="#career">Career</a></li>                
             </ul>
             <button class="btn_close">
                 <span></span>
@@ -65,8 +65,8 @@
 
         <!-- bg_fixed -->
         <div class="bg_fixed animatedParent animateOnce" id="main">
-            <p class="animated fadeInUpShort go">Web Publisher</p>
-            <h2 class="animated fadeInUpShort go">함께 일하고 싶은 웹퍼블리셔<br />김혜미 포트폴리오</h2>
+            <p class="animated  fadeInUpShort go">Web Publisher</p>
+            <h2 class="slower delay-250 fadeInUpShort go">함께 일하고 싶은 웹퍼블리셔<br />김혜미 포트폴리오</h2>
         </div>
         <!-- // bg_fixed -->
 
@@ -75,84 +75,132 @@
             <h3 id="skill">#Skill</h3>
 
             <ul class="skill_list">
-                <li>
+                <li class="animated fadeInUp delay-250">
                     <div class="ico_skill">
                         <span>&lt; &gt;<br />HTML</span>
                     </div>
                 </li>
-                <li>
+                <li class="animated fadeInUp delay-500">
                     <div class="ico_skill">
                         <span>&lt; &gt;<br />CSS</span>
                     </div>
                 </li>
-                <li>
+                <li class="animated fadeInUp delay-750">
                     <div class="ico_skill">
                         <span>&lt; ; &gt;<br />J-Query</span>
                     </div>
                 </li>
-                <li>
+                <li class="animated fadeInUp delay-1000">
                     <div class="ico_skill">
                         <span>&lt; ; &gt;<br />JS</span>
                     </div>
                 </li>
             </ul>
+            <ul class="skill_list type2">
+                <li class="animated fadeInUp">
+                    <div class="ico_skill">
+                        <span>SCSS</span>
+                    </div>
+                </li>
+                <li class="animated fadeInUp">
+                    <div class="ico_skill">
+                        <span>PSD</span>
+                    </div>
+                </li>
+                <li class="animated fadeInUp">
+                    <div class="ico_skill">
+                        <span>Zeplin</span>
+                    </div>
+                </li>
+                <li class="animated fadeInUp">
+                    <div class="ico_skill">
+                        <span>Figma</span>
+                    </div>
+                </li>
+                <li class="animated fadeInUp">
+                    <div class="ico_skill">
+                        <span>XD</span>
+                    </div>
+                </li>
+                <li class="animated fadeInUp">
+                    <div class="ico_skill">
+                        <span>Jira</span>
+                    </div>
+                </li>
+                <li class="animated fadeInUp">
+                    <div class="ico_skill">
+                        <span>SVN</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-            <!-- progress -->
-            <div>            
-                <div class="col-md-6 col-text">
-                    <h2 lang="en">Satisfaction</h2>
-                    <h3>성공을 추구하지 않습니다. 1%라도 고객들의 만족도를 우선으로 합니다.</h3>
-                    <p>
-                        고객들의 만족도를 통해 증명된 원픽셀 피트니스를 확인해보세요! <br>
-                        건강한 삶을 누리기 위해 모든 직원들이 노력하고 있습니다.
-                    </p>
-                    <!--
-                        ## 프로그레스 바 퍼센트 지정 방법 ##
-                        ㆍ아래 각 <div class="progress-group" data-percentage="숫자"> ... </div> 태그에서 data-percentage 부분에 숫자를 입력하시면 됩니다.
-                        ㆍdata-percentage 속성에는 0 ~ 100 까지의 정수만 입력해 주시고, % 등의 특수문자는 절대 넣지 말아 주세요!
-                    -->
-                    <!-- progress group : s -->
-                    <div class="progress-group" data-percentage="88">
-                        <div class="progress-heading" lang="en">
-                            <span class="title">재방문율</span>
-                            <span class="percent">
-                                <span class="percent-text"></span>
-                            </span>
-                        </div>
-                        <div class="progress-wrap">
-                            <div class="bar"></div>
-                        </div>
-                    </div>
-                    <!-- progress group : e -->
-                    <!-- progress group : s -->
-                    <div class="progress-group" data-percentage="75">
-                        <div class="progress-heading" lang="en">
-                            <span class="title">감량 목표 성공율</span>
-                            <span class="percent">
-                                <span class="percent-text"></span>
-                            </span>
-                        </div>
-                        <div class="progress-wrap">
-                            <div class="bar"></div>
-                        </div>
-                    </div>
-                    <!-- progress group : e -->
-                    <!-- progress group : s -->
-                    <div class="progress-group" data-percentage="96">
-                        <div class="progress-heading" lang="en">
-                            <span class="title">고객만족도</span>
-                            <span class="percent">
-                                <span class="percent-text"></span>
-                            </span>
-                        </div>
-                        <div class="progress-wrap">
-                            <div class="bar"></div>
-                        </div>
-                    </div>
-                    <!-- progress group : e -->
-                </div>
+        <h3 id="profile">#Profile</h3>            
+        <!-- move_box 1 -->
+        <div class="animated-bg-section main-animate-section01">
+            <div class="caption container">
+                <h2 lang="en">웹퍼블리셔 김혜미</h2>
+                <p lang="en">어쩌구어쩌구<br />어쩌구</p>
+
+                
+                
             </div>
-            <!-- // progress -->
+            <div class="row">
+                <div class="animated-bg"></div>
+            </div>
+        </div>
+        <!-- // move_box 1 -->
+
+        <div class="container">
+            <!-- progress -->
+            <div class="col-md-6 col-text">
+
+                <!--
+                    ## 프로그레스 바 퍼센트 지정 방법 ##
+                    ㆍ아래 각 <div class="progress-group" data-percentage="숫자"> ... </div> 태그에서 data-percentage 부분에 숫자를 입력하시면 됩니다.
+                    ㆍdata-percentage 속성에는 0 ~ 100 까지의 정수만 입력해 주시고, % 등의 특수문자는 절대 넣지 말아 주세요!
+                -->
+                <!-- progress group : s -->
+                <div class="progress-group" data-percentage="88">
+                    <div class="progress-heading" lang="en">
+                        <span class="title">재방문율</span>
+                        <span class="percent">
+                            <span class="percent-text"></span>
+                        </span>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <!-- progress group : e -->
+                <!-- progress group : s -->
+                <div class="progress-group" data-percentage="75">
+                    <div class="progress-heading" lang="en">
+                        <span class="title">감량 목표 성공율</span>
+                        <span class="percent">
+                            <span class="percent-text"></span>
+                        </span>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <!-- progress group : e -->
+                <!-- progress group : s -->
+                <div class="progress-group" data-percentage="96">
+                    <div class="progress-heading" lang="en">
+                        <span class="title">고객만족도</span>
+                        <span class="percent">
+                            <span class="percent-text"></span>
+                        </span>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <!-- progress group : e -->
+            </div>
+            <!-- // progress -->       
 
             <h3 id="career">#Career</h3>
             <article>
@@ -302,78 +350,12 @@
                 <!-- // 8 -->
 
             </article>
-            
-            <!-- move_box 1 -->
-            <div class="animated-bg-section main-animate-section01">
-                <div class="caption container">
-                    <h2 lang="en">Various Services</h2>
-                    <p lang="en">원픽셀 피트니스는 다양한 서비스를 제공하고 있습니다. <br />최신시설을 통해 특별한 서비스를 누려보세요!</p>
-                </div>
-                <div class="row">
-                    <div class="animated-bg"></div>
-                </div>
-            </div>
-            <!-- // move_box 1 -->
-
-            <article>
-
-                <ul class="thumb_list">
-                    <li>
-                        <a href="#none" class="link">
-                            <img src="https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none" class="link">
-                            <img src="https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none" class="link">
-                            <img src="https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none" class="link">
-                            <img src="https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none" class="link">
-                            <img src="https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg" alt="" />
-                        </a>
-                    </li>
-                </ul>
-
-            </article>
-
-            <!-- move_box 2 -->
-            <div class="ani_box">
-                <div class="bg"></div>
-                <p class="h1">Various Services</p>
-                <p class="h2">원픽셀 피트니스는 다양한 서비스를 제공하고 있습니다. <br />최신시설을 통해 특별한 서비스를 누려보세요!</p>            
-            </div>
-            <!-- // move_box 2 -->
-
-            <!-- move_img --
-            <div class="move_img slower fadeInDownShort">
-                <img src="images/img_01.jpg" alt="" />
-                <img src="images/img_02.jpg" alt="" />
-            </div>
-            !-- // move_img -->
-
         </div>
-
-        
-
-        
-
-        <div style="height:500px;"></div>        
 
     </section>    
 
     <footer>
-        <h1>Logo</h1>
+        <h1>Hyem</h1>
         <ul>
             <li>HOME</li>
             <li>COMPANY</li>
