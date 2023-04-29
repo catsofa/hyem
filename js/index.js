@@ -55,12 +55,12 @@ $(document).ready(function(){
 
     //nav - click
     $('.gnb li > a').on('click',function(){
-        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 500);
     });
 
     //nav - side - click
     $('.side li > a').on('click',function(){
-        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 500);
         //setTimeout(function(){
             $('nav.side').removeClass('on');
         //},0);
