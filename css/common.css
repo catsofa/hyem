@@ -198,8 +198,7 @@ address {}
     .skill_list.type2 li {flex:1 1 33%;}
 
     /* bg_fixed */
-    .bg_fixed {height:50vh;}
-    .bg_fixed > p {padding-top:25vh; font-size:4vw;}
+    .bg_fixed > p {font-size:4vw;}
     .bg_fixed > h2 {font-size:5vw;}
 
 
