@@ -25,6 +25,7 @@ section {position:relative; background:#fff; z-index:10;}
 .container {max-width:1000px; margin:100px auto;}
 article {display:flex; padding:50px 0; flex-wrap:wrap;}
 article:first-child {padding:0 0 50px;}
+h3 {display:table; margin:50px auto; font-size:30px; background:linear-gradient(#fff 60%,#ccc 40%);}
 
 /* header */
 header {z-index:10;}
@@ -147,6 +148,12 @@ nav.side ul li {padding:20px 0; border-bottom:1px solid rgba(255,255,255, .2); c
 /* bg_fixed */
 .bg_fixed {padding:100px 0; background:url('../images/main_11.jpg') no-repeat center/cover fixed; color:#fff; text-align:center; word-break:keep-all;}
 
+/* skill */
+.skill_list {display:flex; flex-wrap:wrap;}
+.skill_list li {flex:1; padding:5px;}
+.ico_skill {position:relative; max-width:100px; height:120px; margin:0 auto; padding-top:30px; border:4px solid #000; border-radius:15px; box-sizing:border-box; text-align:center; font-weight:800; font-size:18px;}
+.ico_skill::before {content:''; position:absolute; right:-4px; top:-4px; border-bottom:4px solid #000; border-top:4px solid transparent; border-left:4px solid #000; border-right:4px solid transparent; width:20px; height:20px; background:#fff; border-radius:5px;}
+.ico_skill::after {content:''; position:absolute; right:-8px; top:8px; width:36px; height:4px; background:#000; border-radius:5px; transform:rotate(45deg);}
 
 /* footer */
 footer {position:fixed; bottom:0; left:0; width:100%; padding:50px; background:#222; color:rgba(255,255,255, .3); z-index:1;}
@@ -175,7 +182,10 @@ address {}
     .slick-slide .h1 {font-size:12px;}
     .slick-slide .h2 {font-size:30px;}
     .slick-slide .h3 {font-size:14px;}
-    
+
+    /* skill */
+    .skill_list li {flex:1 1 50%;}
+    .ico_skill {font-size:12px;}
 
 
 }
