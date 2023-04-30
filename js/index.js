@@ -1,46 +1,5 @@
 $(document).ready(function(){
 
-    $('.slick').slick({
-
-        dots : true, //페이지 네비게이션
-        arrows : true, // next, prev 이동 버튼
-        autoplay : false, // 자동 넘김 여부
-        infinite : true, //반복설정
-        speed: 1000, //슬라이드 속도
-        autoplaySpeed : 3000, // 자동 넘김시 슬라이드 시간
-        pauseOnHover : true,// 마우스 hover시 슬라이드 멈춤
-        /*
-        vertical : false, // 세로 방향 슬라이드 옵션
-        prevArrow : "<button type='button' class='slick-prev'>Previous</button>",
-        nextArrow : "<button type='button' class='slick-next'>Next</button>", //화살표 커스텀
-        slidesToShow: 4, //보여질 슬라이드 수
-        slidesToScroll: 4, //넘겨질 슬라이드 수
-        responsive: [ // -> 반응형 옵션
-            {
-                breakpoint: 1024, // 반응형 ~ 1024
-                settings: { 
-                    slidesToShow: 3, 
-                    slidesToScroll: 3, 
-                    infinite: true, 
-                    dots: true 
-                } 
-            }, { 
-                breakpoint: 600,// 반응형 ~ 600
-                settings: { 
-                    slidesToShow: 2, 
-                    slidesToScroll: 2
-                }
-            }, { 
-                breakpoint: 480,// 반응형 ~ 480 
-                settings: { 
-                    slidesToShow: 1, 
-                    slidesToScroll: 1 
-                } 
-            } 
-        ] 
-        */
-    });
-
     //nav - side
     $('.btn_nav').on('click',function(){
         if( $('nav.side').hasClass('on') ){
@@ -64,10 +23,9 @@ $(document).ready(function(){
         //setTimeout(function(){
             $('nav.side').removeClass('on');
         //},0);
-        
     });
 
-    // main skills progressbar
+    //progressbar
     if ( $('.progress-group').length ) { 
         var waypoint = new Waypoint({ element: $('.progress-group'),
             handler: function(direction) { animate_progress_bar(); }, offset: '100%' }); 
@@ -77,8 +35,7 @@ $(document).ready(function(){
     $('footer').before('<div class="footer_height"></div>');
     $('.footer_height').css('height',$('footer').outerHeight());    
 
-    //var tfAction = true;
-
+    //skill list
     $('.skill_list > li').each(function(i){   
         var $this = $(this);
         $(window).on('scroll',function(){
@@ -89,10 +46,6 @@ $(document).ready(function(){
             }
         });
     });
-
-    
-
-    
 
 });
 
@@ -117,31 +70,15 @@ $(window).on('scroll',function(){
         }
     }
 
-    //probar
-    if( $(this).scrollTop() > $('section').offset().top - $(window).outerHeight() + 200 ){
-        if(tfAction == true){            
-            scrollProBar(0, 78, 2); //eq, percent, duration
-            scrollProBar(1, 56, 3); //eq, percent, duration
-            tfAction = false;
-        }
-    }
-
-    //scrollGo($('.move_img'));
-    //scrollGo($('.skill_list > li'));
-    
-
-    animate_bg_init();
-
-    //scroll indicator
-    scrollIndicator();
+    animate_bg_init(); //animated background effect
+    scrollIndicator(); //scroll indicator
 
 });
 
 // resize
 $(window).resize(function () {
-
-    //scroll indicator
-    scrollIndicator();
+    
+    scrollIndicator(); //scroll indicator
 
 });
 
@@ -185,42 +122,10 @@ function animate_bg_init() {
     }); 
 }    
 
-//probar
-function proBar(i, k, $this){
-    var memberCountConTxt = i;
-    $this.find('.bar').width(memberCountConTxt + '%');
-    $({ val : 0 }).animate({ val : memberCountConTxt }, {
-        duration: k * 1000,
-        step: function() {
-        var num = numberWithCommas(Math.floor(this.val));
-        // var num = numberWithCommas(this.val.toFixed(1)); //소숫점 자리수 표현 지정
-        $this.find('.text').text(num).css('left', i + '%');
-    },
-    complete: function() {
-        var num = numberWithCommas(Math.floor(this.val));
-        $this.find('.text').text(num).css('left', i + '%');
-        }
-    });
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    }
-    $this.find('.bar, .text').css('transition-duration', k + 's');    
-}
-
-function scrollProBar(e, a, b){
-    if( $(window).scrollTop() > $('.item_box').eq(e).offset().top - $(window).outerHeight() ){
-        $('.item_box').eq(e).find('.probar_wrap').each(function(){
-            $(this).append('<div class="percent"><div class="bar"></div><div class="text"></div></div>');
-            proBar(a, b, $(this)); //percent, duration, this
-        });
-        return false;
-    }
-}
-
 // main skills progressbar
 function animate_progress_bar() { 
     $('.progress-group').each(function() { 
-        var $percentage = $(this).data('percentage'); 
+        var $percentage = $(this).data('percentage');
         var $beforeCount = ($(this).find('.text').text() == '') ? 0 : $(this).find('.text').text(); 
         $(this).addClass('active');
         $(this).find('.percent-text').each(function() { 
