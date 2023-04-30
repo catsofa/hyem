@@ -92,7 +92,7 @@ nav.side ul li a {display:block; padding:20px 0;}
 .progress-box .progress-group .progress-wrap .bar {position: absolute; top: 0; left: 0; bottom: 0; background: linear-gradient(to right, #fbc2eb, #a6c1ee)}
 
 /* bg_fixed */
-.bg_fixed {height:100vh; background:url('../images/main_11.jpg') no-repeat center/cover fixed; color:#fff; text-align:center; word-break:keep-all;}
+.bg_fixed {height:100vh; background:url('../images/main_11.jpg') no-repeat center fixed; background-size:cover; color:#fff; text-align:center; word-break:keep-all;}
 .bg_fixed > p {padding-top:45vh; font-size:2vw; text-shadow:0 0 7px #333;}
 .bg_fixed > h2 {margin-top:10px; font-size:3vw; text-shadow:0 0 7px #333;}
 
